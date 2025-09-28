@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const showSignup = document.getElementById("showSignup");
   const showLogin = document.getElementById("showLogin");
 
-  // 🔗 Backend API base URL (Render pe deployed backend ka URL daalo)
-  const API_BASE = "https://phoenix-backend-1.onrender.com";
+  // ✅ Correct backend URL (Render ka live link)
+  const API_BASE = "https://phoenix-backend-1-e2hw.onrender.com";
 
   // 🔄 Toggle between Login & Signup
   showSignup.addEventListener("click", (e) => {
@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(result.message);
 
       if (result.success) {
-        // redirect to login page after signup
         signupForm.reset();
         signupForm.style.display = "none";
         loginForm.style.display = "block";
@@ -67,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await response.json();
       if (result.success) {
         alert("Login successful! Redirecting...");
-        window.location.href = "phoenix.html"; // redirect to phoenix page
+        window.location.href = "phoenix.html"; // ✅ Redirect to phoenix page
       } else {
         alert(result.message);
       }
