@@ -6,7 +6,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
 body {
   background: linear-gradient(rgba(20,30,48,0.7), rgba(36,59,85,0.7)), 
               url('images/feed2.jpg') no-repeat center center fixed;
@@ -18,7 +17,7 @@ body {
   align-items: center;
 }
 
-
+/* Navbar */
 nav {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
@@ -43,6 +42,7 @@ nav ul {
   display: flex;
   gap: 25px;
   justify-content: center;   
+  flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -57,7 +57,7 @@ nav ul li a.active {
   color: #ffcc00;
 }
 
-
+/* Container */
 .container {
   margin-top: 50px;
   background: rgba(255, 255, 255, 0.05);
@@ -80,6 +80,7 @@ nav ul li a.active {
   margin-bottom: 25px;
 }
 
+/* Form */
 .form-group {
   margin-bottom: 20px;
   text-align: left;
@@ -134,14 +135,42 @@ button:hover {
 }
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  nav h1 {
+    font-size: 24px;
+  }
+  nav ul {
+    gap: 15px;
+  }
   .container {
-    width: 90%;
+    width: 80%;
     padding: 30px;
   }
+}
 
+@media (max-width: 480px) {
   nav {
     flex-direction: column;
     gap: 10px;
+  }
+  nav h1 {
+    font-size: 20px;
+  }
+  nav ul {
+    gap: 10px;
+  }
+  .container {
+    width: 90%;
+    padding: 25px;
+  }
+  .container h2 {
+    font-size: 20px;
+  }
+  .container p {
+    font-size: 12px;
+  }
+  button {
+    font-size: 14px;
+    padding: 12px;
   }
 }
