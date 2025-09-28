@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix Feedback Form</title>
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Phoenix</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html">Login</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Feedback Form -->
+  <div class="container">
+    <h2>We Value Your Feedback</h2>
+    <p>Help us improve Phoenix by sharing your thoughts.</p>
+    <form action="https://formspree.io/f/mkgqoprd" method="POST">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Feedback</label>
+        <textarea name="message" placeholder="Write your feedback..." required></textarea>
+      </div>
+
+      <input type="hidden" name="_next" value="thankyou.html">
+      <button type="submit">Send Feedback</button>
+    </form>
+  </div>
+
+</body>
+</html>

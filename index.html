@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix - Login & Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="icon">
+        <h2 class="logo">Phoenix</h2>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="Help.html">Help</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="content">
+
+    
+      <div class="hero">
+        <h1>
+          Welcome to <span>Phoenix</span><br>
+          Your Virtual Assistant
+        </h1>
+        <p class="paragraph">
+          Where Creativity Meets Technology.<br>
+          Phoenix is not just a name, it’s a vision.<br>
+          A vision to rise higher, build smarter,<br>
+          and create something truly unique.<br><br>
+
+          Just like the Phoenix rises from the ashes,<br>
+          we believe in new beginnings and endless possibilities.<br>
+          Our mission is to empower your ideas with innovation,<br>
+          simplify your tasks, and help you achieve more every day.
+        </p>
+        <a href="about.html">
+        <button class="hero-btn">About Phoenix.</button>
+        </a>
+      </div>
+
+       
+      <div class="illustration">
+        <img src="images/middle.gif" alt="Phoenix Illustration">
+        <p class="illustration-text">Rising with Innovation</p>
+        <p class="illustration-text">Ai Powered Assistant</p>
+        <p class="illustration-text">Always With you</p>
+        <p class="illustration-text">simplify Your Work, Amplify your Potential</p>
+      </div>
+
+      
+      <div class="auth-panel">
+        <!-- Login Form -->
+        <form id="loginForm">
+          <h2>Login</h2>
+          <input type="text" placeholder="Enter Username" required>
+          <input type="password" placeholder="Enter Password" required>
+          <button type="submit">Login</button>
+          <p>
+            Don’t have an account?
+            <a href="#" id="showSignup">Signup</a>
+          </p>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" style="display: none;">
+          <h2>Signup</h2>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Signup</button>
+          <p>
+            Already have an account?
+            <a href="#" id="showLogin">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

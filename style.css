@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.6) 50%
+    ),
+    url("images/demo2.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  height: 75px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.icon {
+  width: 200px;
+}
+
+.logo {
+  color: #ffd700;
+  font-size: 40px;
+  font-family: "Trebuchet MS", sans-serif;
+  padding-top: 10px;
+  text-decoration: underline;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu ul li {
+  list-style: none;
+  margin-left: 40px;
+  font-size: 16px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+.menu ul li a:hover {
+  color: #ff7200;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #ff7200;
+}
+
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin: 60px;
+}
+
+
+.hero {
+  flex: 1;
+  text-align: left;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+}
+
+.hero h1 span {
+  color: #ff7200;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero .paragraph {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.hero-btn {
+  background: linear-gradient(90deg, #ff7200, #ffd700);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero-btn:hover {
+  background: linear-gradient(90deg, #ffd700, #ff7200);
+  color: #000;
+  transform: scale(1.07);
+}
+
+/* Illustration */
+.illustration {
+  flex: 1;
+  text-align: center;
+}
+
+.illustration img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  mix-blend-mode: screen; 
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.illustration-text {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd700; 
+  text-shadow: 0 0 10px #ff7200;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Auth Panel */
+.auth-panel {
+  width: 300px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.auth-panel form h2 {
+  width: 100%;
+  text-align: center;
+  color: #ff7200;
+  font-size: 24px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+  padding: 10px;
+}
+
+
+.auth-panel form input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #ff7200;
+  color: #fff;
+  font-size: 15px;
+}
+
+.auth-panel form input:focus {
+  outline: none;
+  border-bottom: 2px solid #ffd700;
+}
+
+.auth-panel form input::placeholder {
+  color: #bbb;
+  opacity: 0.9;
+}
+
+
+.auth-panel form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff7200, #ffd700);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-panel form button:hover {
+  background: linear-gradient(90deg, #ffd700, #ff7200);
+  color: #000;
+  transform: scale(1.05);
+}
+
+
+.auth-panel form p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.auth-panel form p a {
+  color: #ff7200;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-panel form p a:hover {
+  text-decoration: underline;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 992px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .illustration img {
+    max-width: 200px;
+    margin: 20px auto;
+  }
+  .auth-panel {
+    margin-top: 20px;
+    width: 90%;
+  }
+}
