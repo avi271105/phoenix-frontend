@@ -19,10 +19,10 @@ body {
 }
 
 /* Navbar */
-.navbar {
+nav {
   width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: flex-end; /* menu right side */
   align-items: center;
   padding: 15px 40px;
   background: rgba(0, 0, 0, 0.3);
@@ -31,11 +31,29 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  flex-wrap: wrap;
-  gap: 30px;
+  position: relative; /* for logo absolute positioning */
 }
 
-.navbar a {
+/* Phoenix Logo */
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffd700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: underline;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Navbar Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -45,7 +63,8 @@ body {
   border-radius: 8px;
 }
 
-.navbar a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: #ffcc00;
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
@@ -130,15 +149,21 @@ button:hover {
 
 /* 🔹 Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
+  nav {
     flex-direction: column;
-    padding: 10px 20px;
     gap: 15px;
   }
 
-  .navbar a {
-    width: 100%;
-    text-align: center;
+  .logo {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .form-container {

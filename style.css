@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -20,52 +21,52 @@ body {
   overflow-x: hidden;
 }
 
-/* 🔹 Navbar */
-.navbar {
-  width: 100%;
-  max-width: 1200px;
-  height: 75px;
-  margin: auto;
+
+nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; 
   align-items: center;
-  padding: 0 20px;
+  position: relative;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
+nav .logo {
+  font-size: 50px;
+  font-weight: bold;
   color: #ffd700;
-  font-size: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
   font-family: "Trebuchet MS", sans-serif;
-  text-decoration: underline;
 }
 
-.menu ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.menu ul li {
+nav ul {
   list-style: none;
-  margin-left: 40px;
-  font-size: 16px;
+  display: flex;
+  gap: 25px;
 }
 
-.menu ul li a {
+nav ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   font-weight: 500;
   transition: 0.3s ease-in-out;
 }
 
-.menu ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: #ff7200;
-  transform: scale(1.1);
   text-shadow: 0 0 10px #ff7200;
 }
 
-/* 🔹 Hero Section */
+
+
 .content {
   display: flex;
   justify-content: space-between;
@@ -122,7 +123,6 @@ body {
   transform: scale(1.07);
 }
 
-/* 🔹 Illustration */
 .illustration {
   flex: 1;
   text-align: center;
@@ -244,21 +244,43 @@ body {
 
 /* 🔹 Responsive */
 @media (max-width: 992px) {
+  .logo {
+    font-size: 32px;
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu ul {
+    justify-content: center;
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
   .content {
     flex-direction: column;
     text-align: center;
     margin: 20px;
   }
+
   .hero h1 {
     font-size: 36px;
   }
+
   .hero .paragraph {
     font-size: 16px;
   }
+
   .illustration img {
     max-width: 220px;
     margin: 20px auto;
   }
+
   .auth-panel {
     margin-top: 20px;
     width: 90%;
@@ -266,42 +288,37 @@ body {
 }
 
 @media (max-width: 600px) {
-  .navbar {
-    height: auto;
-    padding: 15px;
+  .menu ul {
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .logo {
-    font-size: 28px;
-  }
-
-  /* Navbar ek line me hi rahega */
-  .menu ul {
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-
-  .menu ul li {
-    margin-left: 15px;
+    font-size: 26px;
   }
 
   .content {
     margin: 15px;
     gap: 20px;
   }
+
   .hero h1 {
     font-size: 28px;
   }
+
   .hero .paragraph {
     font-size: 14px;
   }
+
   .hero-btn {
     font-size: 14px;
     padding: 10px 20px;
   }
+
   .illustration img {
     max-width: 180px;
   }
+
   .auth-panel {
     padding: 20px;
   }
