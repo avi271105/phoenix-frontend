@@ -16,12 +16,11 @@ body {
       rgba(0, 0, 0, 0.6) 50%,
       rgba(0, 0, 0, 0.6) 50%
     ),
-    url("images/demo2.jpg");
-  background-position: center;
-  background-size: cover;
+    url("images/demo2.jpg") center/cover no-repeat;
   overflow-x: hidden;
 }
 
+/* 🔹 Navbar */
 .navbar {
   width: 100%;
   max-width: 1200px;
@@ -33,15 +32,10 @@ body {
   padding: 0 20px;
 }
 
-.icon {
-  width: 200px;
-}
-
 .logo {
   color: #ffd700;
   font-size: 40px;
   font-family: "Trebuchet MS", sans-serif;
-  padding-top: 10px;
   text-decoration: underline;
 }
 
@@ -49,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* 🔹 fix: items ek hi line me */
 }
 
 .menu ul li {
@@ -64,12 +58,14 @@ body {
   font-weight: 500;
   transition: 0.3s ease-in-out;
 }
+
 .menu ul li a:hover {
   color: #ff7200;
   transform: scale(1.1);
   text-shadow: 0 0 10px #ff7200;
 }
 
+/* 🔹 Hero Section */
 .content {
   display: flex;
   justify-content: space-between;
@@ -84,8 +80,7 @@ body {
   color: #fff;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.5s;
+  animation: fadeInUp 1s forwards 0.5s;
 }
 
 .hero h1 {
@@ -106,8 +101,7 @@ body {
   line-height: 1.7;
   margin-bottom: 35px;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 2s ease-in-out forwards;
-  animation-delay: 1s;
+  animation: fadeIn 2s ease-in-out forwards 1s;
 }
 
 .hero-btn {
@@ -128,6 +122,7 @@ body {
   transform: scale(1.07);
 }
 
+/* 🔹 Illustration */
 .illustration {
   flex: 1;
   text-align: center;
@@ -141,10 +136,6 @@ body {
   mix-blend-mode: screen;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
 .illustration-text {
   margin-top: 15px;
   font-size: 20px;
@@ -154,11 +145,7 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
+/* 🔹 Auth Panel */
 .auth-panel {
   width: 300px;
   background: rgba(0, 0, 0, 0.65);
@@ -237,6 +224,12 @@ body {
   text-decoration: underline;
 }
 
+/* 🔹 Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -245,10 +238,11 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+/* 🔹 Responsive */
 @media (max-width: 992px) {
   .content {
     flex-direction: column;
@@ -279,14 +273,14 @@ body {
   }
   .logo {
     font-size: 28px;
-    padding-top: 0;
   }
+  /* 🔹 Navbar fix: items ek hi line me */
   .menu ul {
-    flex-direction: column;
-    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: nowrap;
   }
   .menu ul li {
-    margin: 10px 0;
+    margin-left: 15px; /* thoda gap kam */
   }
   .content {
     margin: 15px;
