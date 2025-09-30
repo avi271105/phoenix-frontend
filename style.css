@@ -43,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; /* 🔹 fix: items ek hi line me */
+  flex-wrap: nowrap;
 }
 
 .menu ul li {
@@ -267,21 +267,24 @@ body {
 
 @media (max-width: 600px) {
   .navbar {
-    flex-direction: column;
     height: auto;
     padding: 15px;
   }
+
   .logo {
     font-size: 28px;
   }
-  /* 🔹 Navbar fix: items ek hi line me */
+
+  /* Navbar ek line me hi rahega */
   .menu ul {
     justify-content: center;
     flex-wrap: nowrap;
   }
+
   .menu ul li {
-    margin-left: 15px; /* thoda gap kam */
+    margin-left: 15px;
   }
+
   .content {
     margin: 15px;
     gap: 20px;
