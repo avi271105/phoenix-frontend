@@ -27,28 +27,29 @@ body {
   height: 75px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo left, menu right */
   align-items: center;
   padding: 0 20px;
 }
 
 .logo {
   color: #ffd700;
-  font-size: 40px;
+  font-size: 36px;
   font-family: "Trebuchet MS", sans-serif;
   text-decoration: underline;
+  margin-right: 50px; /* logo ke baad gap */
 }
 
 .menu ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: nowrap; /* 🔹 fix: items ek hi line me */
+  gap: 30px; /* menu items ke beech ka gap */
+  flex-wrap: nowrap;
 }
 
 .menu ul li {
   list-style: none;
-  margin-left: 40px;
   font-size: 16px;
 }
 
@@ -265,23 +266,31 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     height: auto;
     padding: 15px;
+    align-items: flex-start; /* left align */
   }
+
   .logo {
-    font-size: 28px;
+    margin-bottom: 10px;
   }
-  /* 🔹 Navbar fix: items ek hi line me */
+
   .menu ul {
-    justify-content: center;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
   }
+
   .menu ul li {
-    margin-left: 15px; /* thoda gap kam */
+    margin: 0;
   }
+}
+
+@media (max-width: 600px) {
   .content {
     margin: 15px;
     gap: 20px;
