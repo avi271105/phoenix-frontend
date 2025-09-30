@@ -21,10 +21,10 @@ body {
   overflow-x: hidden;
 }
 
-
+/* 🔹 Navbar */
 nav {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   padding: 15px 40px;
@@ -42,8 +42,8 @@ nav .logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  
   font-family: "Trebuchet MS", sans-serif;
+  text-decoration: underline;
 }
 
 nav ul {
@@ -65,8 +65,7 @@ nav ul li a.active {
   text-shadow: 0 0 10px #ff7200;
 }
 
-
-
+/* 🔹 Content Layout */
 .content {
   display: flex;
   justify-content: space-between;
@@ -123,6 +122,7 @@ nav ul li a.active {
   transform: scale(1.07);
 }
 
+/* 🔹 Illustration */
 .illustration {
   flex: 1;
   text-align: center;
@@ -243,23 +243,26 @@ nav ul li a.active {
 }
 
 /* 🔹 Responsive */
-@media (max-width: 992px) {
-  .logo {
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+  }
+
+  nav .logo {
     font-size: 32px;
     position: static;
     transform: none;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .menu ul {
-    justify-content: center;
-    margin-left: 0;
+  nav ul {
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
 
   .content {
@@ -287,14 +290,14 @@ nav ul li a.active {
   }
 }
 
-@media (max-width: 600px) {
-  .menu ul {
-    flex-wrap: wrap;
-    gap: 12px;
+@media (max-width: 480px) {
+  nav .logo {
+    font-size: 26px;
+    margin-bottom: 6px;
   }
 
-  .logo {
-    font-size: 26px;
+  nav ul {
+    gap: 10px;
   }
 
   .content {
